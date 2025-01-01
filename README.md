@@ -88,7 +88,7 @@ IoTでは、データを収集すること以上に、データを活用する�
 
 - [開発ボード ESP32 ESP-WROOM-32 WiFi Bluetooth (USB Type-C)](https://www.amazon.co.jp/gp/product/B0C1444DRX/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&th=1)
 - [IRヒューマンセンサーAM312](https://www.amazon.co.jp/gp/product/B084VMYMFZ/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&th=1)
-- ブレッドボード（ESP32-Devの幅が独特なので、通常の５穴のボードであれば２枚必要）
+- [６穴ブレッドボード](https://www.amazon.co.jp/%E3%82%B5%E3%83%B3%E3%83%8F%E3%83%A4%E3%83%88-SAD-101-%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%96%E3%83%AC%E3%83%83%E3%83%89%E3%83%9C%E3%83%BC%E3%83%89/dp/B00DSKCS68)（ESP32-Devの幅が独特なので、通常の５穴のボードであれば２枚必要、6穴のものが推奨）
 - LED（3.3Vで駆動する任意のLED１個）
 - 抵抗器（3.3V電圧に応じたLEDに対する抵抗１個）
 - ジャンパー線数本
@@ -107,7 +107,7 @@ IoTでは、データを収集すること以上に、データを活用する�
 
 以下に練習問題を用意しました。徐々に機能を勉強して、自分でIoTデバイスを作れるようになりましょう。
 
-- [01.Hello Worldと表示してみよう](practice01/ReadMe.md)
+- [01.Hello Worldと表示してみよう](hello_world/ReadMe.md)
   - まずはESP32と触れ合ってみる
   - MicroPythonの基本構文に慣れる
 - [02.オンボードのLEDを光らせてみよう](practice02/ReadMe.md)
@@ -148,3 +148,9 @@ IoTでは、データを収集すること以上に、データを活用する�
 - [13.センサーキットから好きなセンサーを選んで、デバイスを設計・試作しよう](practice13/ReadMe.md)
   - 自分で機能・仕様を考えられるようになる
   - 設計～試作まで自力で進められるようになる
+
+ここまでくれば、様々なセンサーやアクチュエータを組み合わせて自分の力でデバイスを生み出すことができるはずです。
+
+## 最後に
+
+壊すことを怖がらずに、新しいものを作り出すことが大切だと思います。
