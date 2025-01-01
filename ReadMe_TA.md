@@ -10,15 +10,15 @@
   - サンハヤトの6穴ブレッドボード、5穴のボードの場合にはESP32が幅広なので2枚連結させる必要がある。
   - https://shop.sunhayato.co.jp/products/sad-101
 - PIR AM312
-  - ミニ赤外線赤外線 モーションセンサー
+  - ミニ赤外線赤外線 モーションセンサ
 - LED
 - 抵抗200Ω程度
 - ジャンパー線（オスオス、オスメス）
 - USBケーブル（データ通信対応のもの）
 
-## ストレッチ課題用センサー
+## ストレッチ課題用センサ
 
-- KEYESTUDIO センサーアソートキット センサモジュール スターター キット(keyestudio 48 in 1 sensor kit)
+- KEYESTUDIO センサアソートキット センサモジュール スターター キット(keyestudio 48 in 1 sensor kit)
   - https://wiki.keyestudio.com/KS0349_Keyestudio_48_in_1_Sensor_Kit
   - https://www.amazon.co.jp/gp/product/B0CQJBQ4Y3
 - 分圧回路のための抵抗 1KΩ / 2KΩ
@@ -67,10 +67,10 @@
 
 https://github.com/targetblank/micropython_ahtx0/blob/master/ahtx0.py
 
-## 追加で購入したセンサー
+## 追加で購入したセンサ
 
-- AHT20 温度・湿度センサー
-  - I2Cを介して温度と湿度のデータを取得出来るセンサー
+- AHT20 温度・湿度センサ
+  - I2Cを介して温度と湿度のデータを取得出来るセンサ
   - データレイアウト
     - 0: 0x00 (常に0)
     - 1: Status (ステータス)
@@ -81,10 +81,10 @@ https://github.com/targetblank/micropython_ahtx0/blob/master/ahtx0.py
     - 6: Temperature LSB (温度下位バイト)
   - コマンド
     - 初期化コマンド : 0xBE
-      - センサーをリセットし、初期化
+      - センサをリセットし、初期化
     - 測定開始コマンド : 0xAC 0x33 0x00
       - 測定を開始
-- 振動センサー
+- 振動センサ
   - PIN
     - S(AO): 振動量
     - +: 3.3V / 5V

@@ -15,27 +15,27 @@ PIN_NO_IR_SENSOR = 4
 PIN_NO_BUTTON = 0
 
 # 入出力設定
-led_sensor_detect = Pin(PIN_NO_SENSOR_LED, Pin.OUT)  # センサー反応中に点灯するLED
+led_sensor_detect = Pin(PIN_NO_SENSOR_LED, Pin.OUT)  # センサ反応中に点灯するLED
 led_post_status = Pin(PIN_NO_POST_LED, Pin.OUT)  # サーバPOST時に点灯するLED
-sensor = Pin(PIN_NO_IR_SENSOR, Pin.IN)  # 人感センサー
+sensor = Pin(PIN_NO_IR_SENSOR, Pin.IN)  # 人感センサ
 button = Pin(PIN_NO_BUTTON, Pin.IN)  # オンボードのボタン
 
 # データ用
 USRE_NAME = 'KATO-WORKS'
 
 # グローバル変数
-sensor_status = 0  # 前回割り込み時のセンサーの状態
-count = 0   # センサーの反応回数
+sensor_status = 0  # 前回割り込み時のセンサの状態
+count = 0   # センサの反応回数
 
 
 def sensor_triggerd(sensor_pin):
     """
-    センサーが押されたら
+    センサが押されたら
 
     Parameters
     ----------
     sensor_pin : Pin
-        トリガされたセンサーのピン
+        トリガされたセンサのピン
     """
     global sensor_status, count
 
@@ -157,7 +157,7 @@ if __name__ == "__main__":
     # Wi-Fiに接続
     wlan = connect_wifi(SSID, PASSWORD)
     
-    # センサーへのトリガ設定
+    # センサへのトリガ設定
     sensor.irq(trigger=Pin.IRQ_FALLING | Pin.IRQ_RISING, handler=sensor_triggerd) 
     # ボタンへのトリガ設定
     button.irq(trigger=Pin.IRQ_FALLING, handler=button_push)
