@@ -131,7 +131,7 @@ IoTでは、データを収集すること以上に、データを活用する�
 - [08.Wi-Fiに接続してデータを送信してみよう](http/ReadMe.md)
   - デバイスをネットワークに接続する
   - HTTPの基本を理解する
-- :triangular_flag_on_post: [09.人がいたら、LEDを点灯して、サーバーに通知してみよう](practice09/ReadMe.md)
+- :triangular_flag_on_post: [09.人がいたら、LEDを点灯して、サーバーに通知してみよう](first_iot_device/ReadMe.md)
   - これまでに学んだことを、結集してIoTデバイスを開発する
 - [10.アナログセンサーを読み込んでみよう](practice10/ReadMe.md)
   - アナログ値の読込を経験して、取り扱えるセンサーの幅を広げよう
