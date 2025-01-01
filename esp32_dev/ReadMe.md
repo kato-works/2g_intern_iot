@@ -24,9 +24,9 @@ Thonny は、初心者向けに設計された Python 用の無料のオープ�
 デフォルトの表示だと非常にそっけなく、使いずらいのでファイルビューを追加することをお勧めします。
 
 1. "View"から"Files"を選択しビューを追加
-   - <image src="../images/thonny_dev_00.png" width="350px">
+   - <image src="thonny_dev_00.png" width="350px">
 1. 左側のFilesビューで研修用に作成したフォルダを開く
-   - <image src="../images/thonny_dev_01.png" width="450px">
+   - <image src="thonny_dev_01.png" width="450px">
 
 > [!Note]
 > 様々なViewが用意されているので、自分が使いやすいようにカスタマイズしてみても良いでしょう。
@@ -37,18 +37,18 @@ Thonny+ESP32ではWebREPLという仕組みを通じて、ソースを書いた�
 非常に便利な機能ですが、保存しておけばよかったと後悔することも多いので、ソースコードは名前を付けて保存する癖をつけましょう。
 
 1. "File"から"New"を選択して、新規ソースファイルを作成
-   - <image src="../images/thonny_dev_02.png" width="450px">
+   - <image src="thonny_dev_02.png" width="450px">
 1. ソースコードを書いたら、保存ボタンを押下
    - ここでは仮に print("Hello KATO-WORKS") と書き込む
-   - <image src="../images/thonny_dev_03.png" width="450px">
+   - <image src="thonny_dev_03.png" width="450px">
 1. PC(This Computer)に保存するか、ESP32(MicroPython Device)に保存するか聞かれるので、"This Computer"を選択し、ファイル名を記入して保存を押下
-   - <image src="../images/thonny_dev_04.png" width="450px">
-   - <image src="../images/thonny_dev_05.png" width="450px">
+   - <image src="thonny_dev_04.png" width="450px">
+   - <image src="thonny_dev_05.png" width="450px">
 1. ファイルビューに保存したファイルが表示され、編集エリアもファイル名が記載される。
-   - <image src="../images/thonny_dev_06.png" width="450px">
+   - <image src="thonny_dev_06.png" width="450px">
 1. 上部の緑のRUNボタンを押下することで、プログラムを実行することが出来る
    - 中断する場合には赤のSTOP/RESTARTボタンを押下
-   - <image src="../images/thonny_dev_07.png" width="450px">
+   - <image src="thonny_dev_07.png" width="450px">
 
 > [!NOTE]
 > 実際の業務でのプログラム開発の場合には、バージョン管理ソフトというものを用いて、
