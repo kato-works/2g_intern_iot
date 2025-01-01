@@ -110,42 +110,42 @@ IoTでは、データを収集すること以上に、データを活用する�
 - [01.Hello Worldと表示してみよう](hello_world/ReadMe.md)
   - まずはESP32と触れ合ってみる
   - MicroPythonの基本構文に慣れる
-- [02.オンボードのLEDを光らせてみよう](practice02/ReadMe.md)
+- [02.オンボードのLEDを光らせてみよう](on_board_led/ReadMe.md)
   - GPIOの出力を経験する
   - タイマーや繰り返しを使いこなす 
-- [03.オンボードの静電容量センサーを読み込んでみよう](practice03/ReadMe.md)
+- [03.オンボードの静電容量センサーを読み込んでみよう](capacitive_sensor/ReadMe.md)
   - アナログ値の読み込みを行う（センサーが動くことを体験する）
   - エラー処理を経験する 
-- [04.オンボードの温度センサーを読み込んでみよう](practice04/ReadMe.md)
+- [04.オンボードの温度センサーを読み込んでみよう](analog_sensor/ReadMe.md)
   - 数値計算をする
   - 関数を作成する
-- [05.抵抗と電流、LEDと抵抗を接続して光らせてみよう](practice05/ReadMe.md)
+- [05.抵抗と電流、LEDと抵抗を接続して光らせてみよう](blink_led/ReadMe.md)
   - 簡単な回路について学ぶ
   - 実際に結線してLEDを光らせる
-- [06.人感センサーを接続して、状態をシリアルに表示しよう](practice06/ReadMe.md)
+- [06.人感センサーを接続して、状態をシリアルに表示しよう](infrared_detector/ReadMe.md)
   - GPIOの入力を経験する
   - 外部のセンサーを駆動して、値を取得する
-- [07.イベントハンドラを実装してみよう](practice07/ReadMe.md)
+- [07.イベントハンドラを実装してみよう](event_hundler/ReadMe.md)
   - 割り込みについて学ぶ
   - 構造化されたプログラムを作成する
-- [08.Wi-Fiに接続してデータを送信してみよう](practice08/ReadMe.md)
+- [08.Wi-Fiに接続してデータを送信してみよう](http/ReadMe.md)
   - デバイスをネットワークに接続する
   - HTTPの基本を理解する
-- :triangular_flag_on_post: [09.人がいたら、LEDを点灯して、サーバーに通知してみよう](practice09/ReadMe.md)
+- :triangular_flag_on_post: [09.人がいたら、LEDを点灯して、サーバーに通知してみよう](first_iot_device/ReadMe.md)
   - これまでに学んだことを、結集してIoTデバイスを開発する
-- [10.アナログセンサーを読み込んでみよう](practice10/ReadMe.md)
+- [10.アナログセンサーを読み込んでみよう](analog_sensor_2/ReadMe.md)
   - アナログ値の読込を経験して、取り扱えるセンサーの幅を広げよう
   - しきい値を基準にした処理の分岐を経験しよう
-- [11.PWMを使って、LEDを調光してみよう](practice11/ReadMe.md)
+- [11.PWMを使って、LEDを調光してみよう](pwm/ReadMe.md)
   - PWMを使って、LEDを調光してみよう
   - アナログ値を光の強さで表現してみよう
-- [12.I2Cセンサーを読み込んでみよう](practice12/ReadMe.md)
+- [12.I2Cセンサーを読み込んでみよう](i2c_sensor/ReadMe.md)
   - I2Cで通信で、コマンドの送信とデータの読込をしてみよう
   - バイト配列の取り扱いをしてみよう
 
 以下は、ストレッチの課題となります。自分でセンサーを組み合わせたIoTデバイスを設計してみましょう。
 
-- [13.センサーキットから好きなセンサーを選んで、デバイスを設計・試作しよう](practice13/ReadMe.md)
+- [13.センサーキットから好きなセンサーを選んで、デバイスを設計・試作しよう](diy_iot/ReadMe.md)
   - 自分で機能・仕様を考えられるようになる
   - 設計～試作まで自力で進められるようになる
 
