@@ -19,5 +19,5 @@ def print_range_bar(value, max_value):
 while True:
     # ADC値の読み取り
     value = adc.read()
-    print_range_bar(value, max_value=1023, prefix='GPIO34', print_end='\n')
+    print_range_bar(value, max_value=1023)
     time.sleep(0.2)

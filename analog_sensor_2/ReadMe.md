@@ -72,6 +72,7 @@ def print_range_bar(value, max_value):
     bar_length = int(30 * value / max_value)
     print('█' * bar_length + ' ' * (length - bar_length) + f' : {percent} %')
 
+
 # 乱数で仮にボリュームを定義
 volume = 50.0
 max_volume = 100.0
@@ -90,3 +91,5 @@ while True:
 ```
 
 ## ブレッドボードサンプル
+
+<img src="practice10.png" width="500px">
