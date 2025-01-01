@@ -12,18 +12,18 @@ URL = 'http://192.168.4.1:5000/'  # POSTリクエストを送信するURL
 PIN_NO_SENSOR_LED = 13
 PIN_NO_IR_SENSOR = 4
 
-led_sensor_detect = Pin(PIN_NO_SENSOR_LED, Pin.OUT)  # センサー反応中に点灯するLED
-sensor = Pin(PIN_NO_IR_SENSOR, Pin.IN)  # 人感センサー
+led_sensor_detect = Pin(PIN_NO_SENSOR_LED, Pin.OUT)  # センサ反応中に点灯するLED
+sensor = Pin(PIN_NO_IR_SENSOR, Pin.IN)  # 人感センサ
 
 
 def sensor_triggerd(sensor_pin):
     """
-    センサーが押されたら
+    センサが押されたら
 
     Parameters
     ----------
     sensor_pin : Pin
-        トリガされたセンサーのピン
+        トリガされたセンサのピン
     """
     status = sensor.value()
     if status == 1:
