@@ -110,7 +110,7 @@ IoTでは、データを収集すること以上に、データを活用する�
 - [01.Hello Worldと表示してみよう](hello_world/ReadMe.md)
   - まずはESP32と触れ合ってみる
   - MicroPythonの基本構文に慣れる
-- [02.オンボードのLEDを光らせてみよう](practice02/ReadMe.md)
+- [02.オンボードのLEDを光らせてみよう](on_board_led/ReadMe.md)
   - GPIOの出力を経験する
   - タイマーや繰り返しを使いこなす 
 - [03.オンボードの静電容量センサーを読み込んでみよう](practice03/ReadMe.md)
