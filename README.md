@@ -133,7 +133,7 @@ IoTでは、データを収集すること以上に、データを活用する�
   - HTTPの基本を理解する
 - :triangular_flag_on_post: [09.人がいたら、LEDを点灯して、サーバーに通知してみよう](first_iot_device/ReadMe.md)
   - これまでに学んだことを、結集してIoTデバイスを開発する
-- [10.アナログセンサーを読み込んでみよう](practice10/ReadMe.md)
+- [10.アナログセンサーを読み込んでみよう](analog_sensor_2/ReadMe.md)
   - アナログ値の読込を経験して、取り扱えるセンサーの幅を広げよう
   - しきい値を基準にした処理の分岐を経験しよう
 - [11.PWMを使って、LEDを調光してみよう](practice11/ReadMe.md)
