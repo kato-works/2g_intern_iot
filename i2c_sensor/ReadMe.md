@@ -1,4 +1,4 @@
-# IoT練習: 12.I2Cセンサーを読み込んでみよう
+# IoT練習: 12.I2Cセンサを読み込んでみよう
 
 ## 本練習の目的
 
@@ -21,9 +21,9 @@ ESP32では、21ピンがSDAに22ピンがSCLに割り当てられています�
 i2c = I2C(scl=Pin(22), sda=Pin(21), freq=400000)
 ```
 
-## センサーのスペック
+## センサのスペック
 
-AHT20 I2C温度湿度センサー
+AHT20 I2C温度湿度センサ
 
 <img src="AHT20.jfif" width="300px">
 
@@ -51,7 +51,7 @@ Byte 5: [Temperature LSB]
 
 ## 実装内容
 
-仕様: I2C通信を行う温度・湿度センサーAHT20から値を読み込んで表示してみよう
+仕様: I2C通信を行う温度・湿度センサAHT20から値を読み込んで表示してみよう
 
 ## 以下を実行して結果を確認してみましょう
 
@@ -75,7 +75,7 @@ else:
     print("No I2C devices found")
 ```
 
-AHT20はアドレス0x38だと分かったので、センサーを読み込んでみよう
+AHT20はアドレス0x38だと分かったので、センサを読み込んでみよう
 
 ```python
 from machine import Pin, I2C
@@ -109,6 +109,6 @@ print(f'Temperature: {temperature:.2f} C, Humidity: {humidity:.2f} %')
 
 ## ブレッドボードサンプル
 
-センサー実装基板によって、ピンの配列が異なるので気を付けて。
+センサ実装基板によって、ピンの配列が異なるので気を付けて。
 
 <img src="practice12.png" width="500px">

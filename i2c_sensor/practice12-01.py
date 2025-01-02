@@ -23,7 +23,7 @@ class AHT20:
 
     def _init_sensor(self):
         """
-        センサーの初期化(コマンド"\xBE"の送信)
+        センサの初期化(コマンド"\xBE"の送信)
         """
         self.i2c.writeto(self.addr, b'\xBE')
         time.sleep(0.02)

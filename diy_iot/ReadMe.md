@@ -1,4 +1,4 @@
-# IoT練習: 13.センサーキットから好きなセンサーを選んで、デバイスを設計・試作しよう
+# IoT練習: 13.センサキットから好きなセンサを選んで、デバイスを設計・試作しよう
 
 ## 本練習の目的
 
@@ -7,7 +7,7 @@
 
 ## 注意！
 
-ESP32のGPIOは3.3Vが上限値となるので、5Vのセンサーからデジタル・アナログ入力を受ける場合には、分圧回路を通してあげる必要があります。(ESP32は丈夫ですが、壊れるおそれがあります。)
+ESP32のGPIOは3.3Vが上限値となるので、5Vのセンサからデジタル・アナログ入力を受ける場合には、分圧回路を通してあげる必要があります。(ESP32は丈夫ですが、壊れるおそれがあります。)
 
 <image src="bunnatsu_kairo.png">
 
@@ -21,7 +21,7 @@ R1 = (1.7 / 3.3) * R2
    = 0.52 * R2
 ```
 
-5Vセンサーのアナログ出力を、5.0Vから3.3Vに降圧して32番ピンに入力する例
+5Vセンサのアナログ出力を、5.0Vから3.3Vに降圧して32番ピンに入力する例
 
 <image src="practice13.png" width="500px">
 
@@ -31,7 +31,7 @@ R1 = (1.7 / 3.3) * R2
 仕様は自分で決めてみましょう。
 
 - 入力はなにか？
-  - センサー
+  - センサ
   - ボタン
 - 出力はなにか？
   - 標準出力（print）
@@ -51,11 +51,11 @@ R1 = (1.7 / 3.3) * R2
 
 どのように組み合わせて、プログラムを作成するか？
 
-## センサー例
+## センサ例
 
-以下のようなセンサーを準備しました。ほかにもESP32が備える機能を活用しても良いでしょう。
+以下のようなセンサを準備しました。ほかにもESP32が備える機能を活用しても良いでしょう。
 
-- 入力センサー
+- 入力センサ
   - ボタン
   - 衝突検知
   - ライントレース
@@ -64,18 +64,18 @@ R1 = (1.7 / 3.3) * R2
   - 振動検知
   - 傾き検知
   - タッチ検知
-  - 人感センサー
+  - 人感センサ
   - 温度計
-  - 光センサー
-  - 音量センサー
-  - アルコールセンサー
-  - 明度センサー
+  - 光センサ
+  - 音量センサ
+  - アルコールセンサ
+  - 明度センサ
   - 赤外線受信
   - 心拍計
   - ジョイスティック
   - 回転検出
-  - 温度・湿度センサー
-- 出力センサー
+  - 温度・湿度センサ
+- 出力センサ
   - 各種LED
     - 白
     - RGBで色が調整かのうなもの
@@ -86,7 +86,7 @@ R1 = (1.7 / 3.3) * R2
     - PWMで音色が変えられるもの
   - 赤外線送信
 
-## センサー一覧
+## センサ一覧
 
 詳細はこちらの [PDF](KS0349 Keyestudio 48 in 1 Sensor Kit.pdf) を参照
 
@@ -143,13 +143,13 @@ R1 = (1.7 / 3.3) * R2
     - +: 3.3V / 5V
     - -: GND
 - 8: Collision Sensor
-  - 衝突センサー（実質ボタン？）
+  - 衝突センサ（実質ボタン？）
   - PIN
     - S(DO): ON/OFF
     - +: 3.3V / 5V
     - -: GND
 - 9: Line Tracing Sensor
-  - ライントレースセンサー
+  - ライントレースセンサ
   - PIN
     - S(DO): ON/OFF
     - +: 5V
@@ -176,26 +176,26 @@ R1 = (1.7 / 3.3) * R2
     - +: 3.3V / 5V
     - -: GND
 - 13: Knock Sensor Module
-  - 振動センサー
+  - 振動センサ
   - PIN
     - S(DO): ON/OFF
     - +: 3.3V / 5V
     - -: GND
 - 14: Ditital Tilt Sensor
-  - 傾きセンサー
+  - 傾きセンサ
   - PIN
     - S(DO): ON/OFF
     - +: 3.3V / 5V
     - -: GND
   - 角度がわかるわけではありません。
 - 15: Capacitive Touch Sensor
-  - タッチセンサー
+  - タッチセンサ
   - PIN
     - S(DO): ON/OFF
     - +: 3.3V / 5V
     - -: GND
 - 16: Flame Sensor
-  - 炎（特定周波数の光）センサー
+  - 炎（特定周波数の光）センサ
   - PIN
     - S(DO): ON/OFF
     - +: 3.3V / 5V
@@ -207,94 +207,94 @@ R1 = (1.7 / 3.3) * R2
     - +: 3.3V / 5V
     - -: GND
 - 18: PIR Motion Sensor
-  - 人感センサー
+  - 人感センサ
   - PIN
     - S(DO): ON/OFF
     - +: 3.3V / 5V
     - -: GND
-  - 今までの実習課題で使ったものと同じセンサーです
+  - 今までの実習課題で使ったものと同じセンサです
 - 19: Analog Temperature Sensor
   - アナログ温度計
   - PIN
-    - S(AO): NTCサーミスタ（温度センサー）の抵抗値
+    - S(AO): NTCサーミスタ（温度センサ）の抵抗値
     - +: 5V
     - -: GND
   - ESP32のアナログ信号は0~3.9Vなので、注意が必要
   - エンコードを行う関数をちゃんと作ってみる
 - 20: Analog Rotation Sensor
-  - アナログ回転センサー
+  - アナログ回転センサ
   - PIN
     - S(AO): 角度
     - +: 3.3V / 5V
     - -: GND
 - 21: Photocell Sensor
-  - 光センサー
+  - 光センサ
   - PIN
     - S(AO): 明るさ
     - +: 5V
     - -: GND
 - 22: Analog Sound Sensor
-  - 音量センサー
+  - 音量センサ
   - PIN
     - S(AO): 音量
     - +: 3.3V / 5V
     - -: GND
 - 23: Water Sensor
-  - 水位センサー
+  - 水位センサ
   - PIN
     - S(AO): 水位
     - +: 5V
     - -: GND
 - 24: Soil Humidity Sensor
-  - 土中湿度センサー
+  - 土中湿度センサ
   - PIN
     - S(AO): 湿度
     - +: 3.3V / 5V
     - -: GND
 - 25: Analog Gas Sensor
-  - ガス検知センサー（MQ2）
+  - ガス検知センサ（MQ2）
   - PIN
     - S(AO): ガス濃度
     - +: 5V
     - -: GND
 - 26: Analog Alcohol Sensor
-  - アルコール検知センサー（MQ3）
+  - アルコール検知センサ（MQ3）
   - PIN
     - S(AO): アルコール濃度
     - +: 5V
     - -: GND
 - 27: Steam Sensor
-  - 蒸気センサー
+  - 蒸気センサ
   - PIN
     - S(AO): 蒸気濃度
     - +: 5V
     - -: GND
 - 28: Analog Piezoelectric Ceramic Vibration Sensor
-  - アナログ振動センサー
+  - アナログ振動センサ
   - PIN
     - S(AO): 振動量
     - NC: 3.3V / 5V
     - -: GND
 - 29: Voltage Sensor
-  - 電圧センサー
+  - 電圧センサ
   - PIN
     - S(AO): 0V ~ 25V
     - NC: 5V
     - -: GND
 - 30: Tin-film Pressure Sensor
-  - 圧力センサー
+  - 圧力センサ
   - PIN
     - S(AO): 0 ~ 10Kg
     - +: 3.3V / 5V
     - -: GND
 - 31: TEMT6000 Ambient Light Sensor
-  - 明度センサー
+  - 明度センサ
   - PIN
     - S(AO): 明るさ
     - +: 5V
     - -: GND
 - 32: DUVA-S12SD 3528 Ultraviolet Sensor
-  - 紫外線センサー
+  - 紫外線センサ
   - PIN
     - S(AO): 明るさ
     - +: 2.5V ~ 5V
@@ -340,7 +340,7 @@ R1 = (1.7 / 3.3) * R2
     - +: 5V
     - -: GND
 - 39: LM35 Linear Temperature Sensor
-  - 温度センサー
+  - 温度センサ
   - PIN
     - S(AO): 0 ~ 100℃ (10mV/℃)
     - +: 5V
@@ -348,7 +348,7 @@ R1 = (1.7 / 3.3) * R2
   - 3.3Vに降圧して利用した場合には以下の計算式（そのまま直結した場合には500.0）
     - adc.read() * 330.0 / 1023
 - 40: DHT11 Temperature and Humidity Sensor
-  - 温度・湿度センサー
+  - 温度・湿度センサ
   - PIN
     - S(Serial TX): 9600bpsで5byteのデータを送信
       - 第1バイト（8ビット）：湿度の整数部分
@@ -359,14 +359,14 @@ R1 = (1.7 / 3.3) * R2
     - +: 5V
     - -: GND
 - 41: Magical Light Cup Module
-  - よくわからない、明るさ調整できるセンサー？？
+  - よくわからない、明るさ調整できるセンサ？？
   - PIN
     - L(DI): LED
     - S(DO): BUTTON
     - +: 3.3V / 5.0V
     - -: GND
 - 42: APDS-9930 Attitude Sensor Module
-  - 周囲光センサー
+  - 周囲光センサ
   - PIN
     - 3.3V: 3.3V
     - GND: GND
@@ -374,7 +374,7 @@ R1 = (1.7 / 3.3) * R2
     - SCL: I2C Clock
     - INT: Interrupt
 - 43: ALS Infrared LED Optical Proximity Detection Module
-  - 環境光、近接センサー、赤外線LEDの複合センサー
+  - 環境光、近接センサ、赤外線LEDの複合センサ
   - PIN
     - 3.3V: 3.3V
     - GND: GND
@@ -382,7 +382,7 @@ R1 = (1.7 / 3.3) * R2
     - SCL: I2C Clock
     - INT: Interrupt
 - 44: MMA8452Q Triaxial Digital Acceleration Tilt Sensor
-  - 3軸加速度センサー
+  - 3軸加速度センサ
   - PIN
     - 3.3V: 3.3V
     - GND: GND
@@ -396,7 +396,7 @@ R1 = (1.7 / 3.3) * R2
     - 赤: 5V
     - 茶: GND
 - 46: HC-SR04 Blue Ultrasonic Sensor
-  - 超音波センサー（距離測定）
+  - 超音波センサ（距離測定）
   - PIN
     - VCC: 5V
     - Trig(DI): 発信指示

@@ -1,14 +1,14 @@
 from machine import Pin
 import time
 
-PIN_NO_SENSOR = 4  # センサーのOUTと接続したGPIO
+PIN_NO_SENSOR = 4  # センサのOUTと接続したGPIO
 
-count = 0  # センサーの反応した回数
+count = 0  # センサの反応した回数
 
 
 def sensor_trigger(pin):
     """
-    センサーがONまたはOFFに遷移したときに、割り込み処理として呼ばれる
+    センサがONまたはOFFに遷移したときに、割り込み処理として呼ばれる
 
     Parameters
     ----------
