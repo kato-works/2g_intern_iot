@@ -125,5 +125,6 @@ while True:
  
 ```
 
+event_fallingしか動いていないことが分かると思います。イベントハンドラは上書きされて、event_risingは呼ばれなくなります。
 
 [トップへ戻る](../README.md)
