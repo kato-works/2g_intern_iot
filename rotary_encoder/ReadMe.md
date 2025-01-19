@@ -56,7 +56,7 @@
 | D | SW | プッシュボタン信号（スイッチ出力） |
 | E | (ボタンのGND) | プッシュボタンのグラウンド接続（内部でGNDに接続される場合あり） |
 
-<image src="product_detail_fig_ec11_d_84_ja_97c51f897a.gif" width="150px">
+<image src="product_detail_fig_ec11_d_84_ja_97c51f897a.gif" width="400px">
 
 https://tech.alpsalpine.com/j/products/detail/EC11E15244B2/
 
