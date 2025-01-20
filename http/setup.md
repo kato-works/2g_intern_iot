@@ -39,14 +39,18 @@ dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
 
 ### ネットワークインターフェースの静的IPアドレス設定
 
-設定ファイルに以下の内容を追加 ( /etc/dhcpcd.conf )
+設定ファイルに以下の内容を追加 ( /etc/network/interfaces )
 
 wlan0のインタフェースに対して、固定IP 192.168.4.1 を設定
 
  ```conf
-interface wlan0
-static ip_address=192.168.4.1/24
-nohook wpa_supplicant
+iface wlan0 inet static
+address 192.168.4.1
+network 192.168.4.1
+netmask 255.255.255.0
+broadcast 192.168.4.255
+gateway 192.168.4.1
+dns-nameservers 192.168.4.1
  ```
 
 ### アクセスポイント（hostapd）の設定
