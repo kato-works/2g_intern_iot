@@ -27,11 +27,11 @@ USER_CTRL = 0x6A
 
 # MPU-6050を初期化する関数
 def init_mpu6050():
-    i2c.writeto_mem(MPU6050_I2C_ADDRESS, PWR_MGMT_1, b'0x01')
-    i2c.writeto_mem(MPU6050_I2C_ADDRESS, PWR_MGMT_2, b'0x00')
-    i2c.writeto_mem(MPU6050_I2C_ADDRESS, SIGNAL_PATH_RESET, b'0x00')
-    i2c.writeto_mem(MPU6050_I2C_ADDRESS, USER_CTRL, b'0x00')
-    i2c.writeto_mem(MPU6050_I2C_ADDRESS, SMPLRT_DIV, b'0x04')
+    i2c.writeto_mem(MPU6050_I2C_ADDRESS, PWR_MGMT_1, b'\x01')
+    i2c.writeto_mem(MPU6050_I2C_ADDRESS, PWR_MGMT_2, b'\x00')
+    i2c.writeto_mem(MPU6050_I2C_ADDRESS, SIGNAL_PATH_RESET, b'\x00')
+    i2c.writeto_mem(MPU6050_I2C_ADDRESS, USER_CTRL, b'\x00')
+    i2c.writeto_mem(MPU6050_I2C_ADDRESS, SMPLRT_DIV, b'\x04')
 
 init_mpu6050()
 pwr_mgmt_2 = i2c.readfrom_mem(MPU6050_I2C_ADDRESS, PWR_MGMT_2, 1)
