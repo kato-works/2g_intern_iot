@@ -21,12 +21,12 @@ def set_event(led_pin_no=2, button_pin_no=0):
     global led
     led = Pin(led_pin_no, Pin.OUT)
     button = Pin(button_pin_no, Pin.IN)
-    button.irq(trigger=Pin.IRQ_FALLING | Pin.IRQ_RISING, handler=button_triggerd) 
+    button.irq(trigger=Pin.IRQ_FALLING | Pin.IRQ_RISING, handler=button_triggered) 
 
     return
 
 
-def button_triggerd(pin):
+def button_triggered(pin):
     """
     BUTTONからイベントが発生際の処理、
     押されていればLEDを点灯、離されていれば消灯する。

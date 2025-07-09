@@ -16,7 +16,7 @@ led_sensor_detect = Pin(PIN_NO_SENSOR_LED, Pin.OUT)  # センサ反応中に点�
 sensor = Pin(PIN_NO_IR_SENSOR, Pin.IN)  # 人感センサ
 
 
-def sensor_triggerd(sensor_pin):
+def sensor_triggered(sensor_pin):
     """
     センサが押されたら
 
@@ -94,7 +94,7 @@ def post_data(url, data):
 # Wi-Fiに接続
 wlan = connect_wifi(SSID, PASSWORD)
 
-sensor.irq(trigger=Pin.IRQ_FALLING | Pin.IRQ_RISING, handler=sensor_triggerd) 
+sensor.irq(trigger=Pin.IRQ_FALLING | Pin.IRQ_RISING, handler=sensor_triggered) 
 
 while True:
     time.sleep(1)

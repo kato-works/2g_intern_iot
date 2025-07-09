@@ -28,7 +28,7 @@ sensor_status = 0  # 前回割り込み時のセンサの状態
 count = 0   # センサの反応回数
 
 
-def sensor_triggerd(sensor_pin):
+def sensor_triggered(sensor_pin):
     """
     センサが押されたら
 
@@ -158,7 +158,7 @@ if __name__ == "__main__":
     wlan = connect_wifi(SSID, PASSWORD)
     
     # センサへのトリガ設定
-    sensor.irq(trigger=Pin.IRQ_FALLING | Pin.IRQ_RISING, handler=sensor_triggerd) 
+    sensor.irq(trigger=Pin.IRQ_FALLING | Pin.IRQ_RISING, handler=sensor_triggered) 
     # ボタンへのトリガ設定
     button.irq(trigger=Pin.IRQ_FALLING, handler=button_push)
 
