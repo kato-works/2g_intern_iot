@@ -28,7 +28,7 @@ def post_data():
     if request.method == 'GET':
         data = request.args.to_dict()
         print(f'GET param:{data}')
-        app.queue.put('GET:' + str())
+        app.queue.put('GET:' + str(data))
         # GETではデータの更新はしない
         result = {
             'method': 'GET', 
