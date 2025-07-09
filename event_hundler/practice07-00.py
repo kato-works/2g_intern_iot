@@ -11,7 +11,7 @@ def button_push(pin):
     time.sleep(1)
     led.off()
 
-button.irq(trigger=Pin.IRQ_FALLING, handler=button_push)  # 値が0->1になったら関数を呼び出し
+button.irq(trigger=Pin.IRQ_FALLING, handler=button_push)  # 値が1->0になったら関数を呼び出し
 
 while True:
     time.sleep(1)
