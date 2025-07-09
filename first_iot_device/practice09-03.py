@@ -21,7 +21,7 @@ sensor = Pin(PIN_NO_IR_SENSOR, Pin.IN)  # 人感センサ
 button = Pin(PIN_NO_BUTTON, Pin.IN)  # オンボードのボタン
 
 # データ用
-USRE_NAME = 'KATO-WORKS'
+USER_NAME = 'KATO-WORKS'
 
 # グローバル変数
 sensor_status = 0  # 前回割り込み時のセンサの状態
@@ -40,7 +40,7 @@ def sensor_triggerd(sensor_pin):
     global sensor_status, count
 
     data = {
-        'name': USRE_NAME,
+        'name': USER_NAME,
     }
     status = sensor.value()
     if sensor_status != status:  # 前回のステータスと比較
@@ -70,7 +70,7 @@ def button_push(button_pin):
         トリガされたボタンのピン
     """
     data = {
-        'name': USRE_NAME,
+        'name': USER_NAME,
         'AM312': sensor_status,
         'AM312_SW': count,
         'trigger': 'button',
