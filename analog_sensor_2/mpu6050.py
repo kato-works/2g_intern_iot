@@ -25,13 +25,13 @@ def reset_mpu6050():
 
 # MPU-6050の初期化
 def init_mpu6050():
-    i2c.writeto_mem(MPU6050_I2C_ADDRESS, 0x6B, b'0x00')  # スリープ解除
-    i2c.writeto_mem(MPU6050_I2C_ADDRESS, 0x6C, b'0x00')
-    i2c.writeto_mem(MPU6050_I2C_ADDRESS, 0x1B, b'0x00')  # ジャイロ範囲±250°/s
-    i2c.writeto_mem(MPU6050_I2C_ADDRESS, 0x1C, b'0x00')  # 加速度範囲±2g
-    i2c.writeto_mem(MPU6050_I2C_ADDRESS, 0x19, b'0x04')
-    i2c.writeto_mem(MPU6050_I2C_ADDRESS, 0x37, b'0x02')
-    i2c.writeto_mem(MPU6050_I2C_ADDRESS, 0x38, b'0x01')
+    i2c.writeto_mem(MPU6050_I2C_ADDRESS, 0x6B, b'\x00')  # スリープ解除
+    i2c.writeto_mem(MPU6050_I2C_ADDRESS, 0x6C, b'\x00')
+    i2c.writeto_mem(MPU6050_I2C_ADDRESS, 0x1B, b'\x00')  # ジャイロ範囲±250°/s
+    i2c.writeto_mem(MPU6050_I2C_ADDRESS, 0x1C, b'\x00')  # 加速度範囲±2g
+    i2c.writeto_mem(MPU6050_I2C_ADDRESS, 0x19, b'\x04')
+    i2c.writeto_mem(MPU6050_I2C_ADDRESS, 0x37, b'\x02')
+    i2c.writeto_mem(MPU6050_I2C_ADDRESS, 0x38, b'\x01')
 
 reset_mpu6050()
 init_mpu6050()
