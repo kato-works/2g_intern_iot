@@ -88,6 +88,5 @@ GPIOを入力の場合にはON/OFFの読み出しを、出力の場合にはON/O
   - クロック信号　(SCLK,CLK,SCK[Serial Clock]) SPICLK
   - スレーブ選択　(CS[Chip Select]/SS[Slave Select]/SYNC/ENABLE) SPICS0
   - 書き込み保護ライン(HSPI_WP / VSPI_WP)デバイスで書き込み保護機能を制御するために使用
-  - 保持データライン（HSPI_HD / VSPI_HD）　デバイスを一時的に停止させるために使用さ
-
+  - 保持データライン（HSPI_HD / VSPI_HD） デバイスを一時的に停止させるために使用される
 [トップへ戻る](../README.md)
