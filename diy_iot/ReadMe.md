@@ -373,6 +373,8 @@ R1 = (1.7 / 3.3) * R2
     - SDA: I2C Data
     - SCL: I2C Clock
     - INT: Interrupt
+
+
 - 43: ALS Infrared LED Optical Proximity Detection Module
   - 環境光、近接センサ、赤外線LEDの複合センサ
   - PIN
@@ -413,3 +415,27 @@ R1 = (1.7 / 3.3) * R2
     - SDA: I2C Data
     - SCL: I2C Clock
     - INT: Interrupt
+
+## デバイスアイデア例
+
+以下のセンサやモジュールを組み合わせて作成できるサンプルデバイスをいくつか示します。
+
+1. **室内環境モニタ**
+   - 使用例: DHT11 Temperature and Humidity Sensor(#40)、DUVA-S12SD 3528 Ultraviolet Sensor(#32)、Keystudio 0820 LCD module(#47)
+   - 室温・湿度・紫外線量を計測し、LCDに表示する。
+
+2. **スマート植木鉢**
+   - 使用例: Soil Humidity Sensor(#24)、Water Sensor(#23)、5V 1 Channel Relay Module(#38)
+   - 土壌湿度と水位を確認し、乾燥時にはリレー経由でポンプを駆動する。
+
+3. **音声リアクティブライト**
+   - 使用例: Analog Sound Sensor(#22)、RGB LED Module(#2)
+   - 周囲の音量に合わせてLEDの色や明るさを変化させる。
+
+4. **距離警告システム**
+   - 使用例: HC-SR04 Blue Ultrasonic Sensor(#46)、White LED Module(#1) またはブザー
+   - 一定距離以内に物体を検知したらLED点灯やブザーで警告する。
+
+5. **心拍トレーニング表示器**
+   - 使用例: Pulse Rate Monitor Module(#35)、Keystudio 8x8 LED Matrix Module(#48)
+   - 心拍数を読み取り、LEDマトリクスで数値表示やアラートを行う。
