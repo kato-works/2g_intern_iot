@@ -20,11 +20,12 @@
    - 本実習ではESP32_GENERIC-20240602-v1.23.0.binで動作確認を行っています
    - <image src="download_firmware.png" width="400px">
 1. ESP32をPCにUSBケーブルで接続
-1. Windowsの「デバイスマネージャ」を起動し「ポート(COMとLPT)」に「USB-SERIAL CH340 (COMXX) 」と表示されていることを確認
+1. Windowsの「デバイスマネージャ」を起動し「ポート(COMとLPT)」に「USB-SERIAL CH340 (COMXX) 」もしくは「Silicon Labs CP210x USB to UART Bridge (COMXX)」と表示されていることを確認
    - COMXXは各自で異なるので、メモしてください
    - <image src="device_manager.png" width="400px">
 1. USB-SERIALの表示がない場合には、CH340のドライバをインストールして再接続
-   - [CH340 Serial Driver](CH341SER.zip) シリアル接続ドライバ
+   - [CH340 Serial Driver](CH341SER.zip) CH340 シリアル接続ドライバ(解凍してSETUP.EXEを実行)
+   - [CP210x Srial Driver](CP210x_Universal_Windows_Driver.zip) CP210x シリアル接続ドライバ（解凍してsilabser.infを右クリックし「インストール」を実行）
 
 > [!CAUTION]
 > ESP32のUSBコネクタは強くないので、折らないように気を付けてください。
