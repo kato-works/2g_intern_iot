@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Control with Smooth Reset Sliders</title>
+    <style>
+        .slider-container {
+            margin: 20px 0;
+        }
+        .slider-label {
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WebSocketによるラジコン制御（スライダー滑らかリセット）</h1>
+
+    <div class="slider-container">
+        <label class="slider-label" for="speedSlider">Speed: <span id="speedValue">0</span></label>
+        <input type="range" id="speedSlider" min="-512" max="512" value="0">
+    </div>
+
+    <div class="slider-container">
+        <label class="slider-label" for="handleSlider">Handle: <span id="handleValue">0</span></label>
+        <input type="range" id="handleSlider" min="-512" max="512" value="0">
+    </div>
+
+    <div id="response"></div>
+
+    <script>
+        var ws = new WebSocket("ws://192.168.4.1");
+        var speed = 0;
+        var handle = 0;
+        var speedInterval;
+        var handleInterval;
+        var smoothingDuration = 500; // 徐々に戻る時間（ミリ秒）
+
+        ws.onopen = function() {
+            console.log("WebSocket接続が開かれました");
+        };
+
+        ws.onmessage = function(event) {
+            document.getElementById("response").innerText = "受信メッセージ: " + event.data;
+        };
+
+        // スライダーのイベントリスナーを設定
+        var speedSlider = document.getElementById("speedSlider");
+        var handleSlider = document.getElementById("handleSlider");
+
+        speedSlider.addEventListener('input', function() {
+            clearInterval(speedInterval); // 既存のリセット処理を停止
+            speed = parseInt(this.value);
+            document.getElementById("speedValue").innerText = speed;
+            sendMessage();
+        });
+
+        handleSlider.addEventListener('input', function() {
+            clearInterval(handleInterval); // 既存のリセット処理を停止
+            handle = parseInt(this.value);
+            document.getElementById("handleValue").innerText = handle;
+            sendMessage();
+        });
+
+        // スライダーを離したときに値を徐々に0にリセット
+        speedSlider.addEventListener('mouseup', smoothResetSpeed);
+        speedSlider.addEventListener('touchend', smoothResetSpeed);
+
+        handleSlider.addEventListener('mouseup', smoothResetHandle);
+        handleSlider.addEventListener('touchend', smoothResetHandle);
+
+        function smoothResetSpeed() {
+            var startValue = speed;
+            var startTime = Date.now();
+
+            speedInterval = setInterval(function() {
+                var elapsed = Date.now() - startTime;
+                var progress = elapsed / smoothingDuration;
+
+                if (progress >= 1) {
+                    progress = 1;
+                    clearInterval(speedInterval);
+                }
+
+                // 線形補間で値を計算
+                speed = Math.round(startValue * (1 - progress));
+                speedSlider.value = speed;
+                document.getElementById("speedValue").innerText = speed;
+                sendMessage();
+            }, 20); // 20ミリ秒ごとに更新
+        }
+
+        function smoothResetHandle() {
+            var startValue = handle;
+            var startTime = Date.now();
+
+            handleInterval = setInterval(function() {
+                var elapsed = Date.now() - startTime;
+                var progress = elapsed / smoothingDuration;
+
+                if (progress >= 1) {
+                    progress = 1;
+                    clearInterval(handleInterval);
+                }
+
+                // 線形補間で値を計算
+                handle = Math.round(startValue * (1 - progress));
+                handleSlider.value = handle;
+                document.getElementById("handleValue").innerText = handle;
+                sendMessage();
+            }, 20); // 20ミリ秒ごとに更新
+        }
+
+        // メッセージを送信する関数
+        function sendMessage() {
+            var message = "speed=" + speed + "&handle=" + handle;
+            // ws.send(message);
+            console.log("送信メッセージ:", message);
+        }
+    </script>
+</body>
+</html>
