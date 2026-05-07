@@ -43,10 +43,13 @@ def post_data(url, data):
 
         if response.status_code != 200:  # HTTPは200が成功のコード
             print(f'POST Failed.')
+            response.close()
             return None
         else:
             print('Response content:', response.text)
-        return response.text
+            result = response.text
+            response.close()
+            return result
         
     except Exception as e:
         print(f'POST Failed. {e}')

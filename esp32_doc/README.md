@@ -1,7 +1,7 @@
 
 # ESP32 リファレンス
 
-<img alt="esp32" src="esp32.jpg" width="200pix"/>
+<img alt="esp32" src="esp32.jpg" width="200px"/>
 
 クイックスタートや、APIのリファレンスは下記から参照できます。
 さらに詳細が知りたければ、じっくり読んでみましょう。

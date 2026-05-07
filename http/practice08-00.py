@@ -40,7 +40,7 @@ def post_data(url, data):
     response = urequests.post(url, json=data)
     print('Response status:', response.status_code)
     print('Response content:', response.text)
-    return response
+    response.close()
 
 
 # Wi-Fiに接続
@@ -52,7 +52,7 @@ data = {
 }
 
 # サーバへ送信
-response = post_data(URL, data)
+post_data(URL, data)
 
 # WiFiから切断
 wlan.disconnect()

@@ -4,8 +4,8 @@ from machine import ADC, Pin
 
 # ADCピンの設定 (例えばGPIO34)
 adc = ADC(Pin(34))
-# ADCの幅を設定（通常は10ビット幅で0〜1023）
-adc.width(ADC.WIDTH_10BIT)
+# ADCの読み取りレンジを設定（0〜4095）
+adc.width(ADC.WIDTH_12BIT)
 # ADCの減衰を設定（デフォルトは0dB）
 adc.atten(ADC.ATTN_11DB)  # 11dB attenuation (0-3.6V)
 
@@ -19,5 +19,5 @@ def print_range_bar(value, max_value):
 while True:
     # ADC値の読み取り
     value = adc.read()
-    print_range_bar(value, max_value=1023)
+    print_range_bar(value, max_value=4095)
     time.sleep(0.2)

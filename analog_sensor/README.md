@@ -16,7 +16,7 @@ ESP32は内部温度を測定できるので、温度を測定してみよう。
 - 華氏を摂氏に変換するには32を引いてから 5/9をかけます。
 - 温度センサの値の読み込みは、 esp32.raw_temperature()
 
-## 以下を実行して結果を確認してみましょう
+## 手順
 
 華氏で温度を計測する
 
@@ -38,5 +38,11 @@ temperature_fahrenheit = 119
 temperature_celsius = fahrenheit_to_celsius(temperature_fahrenheit)
 print(f'temperature_celsius: {temperature_celsius} ℃')
 ```
+
+## ここまでできればOK
+
+- `esp32.raw_temperature()` を使って値を取得できる
+- 華氏から摂氏への変換式を説明できる
+- 関数に計算処理を切り出せる
 
 [トップへ戻る](../README.md)

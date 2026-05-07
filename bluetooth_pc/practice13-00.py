@@ -11,12 +11,16 @@ _IRQ_GATTS_WRITE = 3
 
 ble = bluetooth.BLE()
 ble.active(True)
+conn_handle = None
 
 
 def bt_irq(event, data):
+    global conn_handle
     if event == _IRQ_CENTRAL_CONNECT:
+        conn_handle, _, _ = data
         print("PC connected")
     elif event == _IRQ_CENTRAL_DISCONNECT:
+        conn_handle = None
         print("PC disconnected")
     elif event == _IRQ_GATTS_WRITE:
         conn_handle, value_handle = data
@@ -39,5 +43,6 @@ adv = b"\x02\x01\x06" + bytes((len(name) + 1, 0x09)) + name
 ble.gap_advertise(100, adv)
 
 while True:
-    ble.gatts_notify(0, tx_handle, b"Hello PC")
+    if conn_handle is not None:
+        ble.gatts_notify(conn_handle, tx_handle, b"Hello PC")
     time.sleep(5)

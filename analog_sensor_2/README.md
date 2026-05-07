@@ -30,7 +30,7 @@ ADC2を利用するピン
 - GPIO26
 - GPIO27
 
-## 以下を実行して結果を確認してみましょう
+## 手順
 
 アナログ値の読込み
 
@@ -47,8 +47,8 @@ import time
 
 # ADCピンの設定 (例えばGPIO34)
 adc = ADC(Pin(34))
-# ADCの幅を設定（通常は10ビット幅で0〜1023）
-adc.width(ADC.WIDTH_10BIT)
+# ADCの読み取りレンジを設定（0〜4095）
+adc.width(ADC.WIDTH_12BIT)
 # ADCの減衰を設定（デフォルトは0dB）
 adc.atten(ADC.ATTN_11DB)  # 11dB attenuation (0-3.6V)
 
@@ -93,3 +93,11 @@ while True:
 ## ブレッドボードサンプル
 
 <img src="practice10.png" width="500px">
+
+## ここまでできればOK
+
+- アナログ値を読み取れる
+- しきい値や割合に変換して表示できる
+- Wi-Fiと同時利用できないADC2ピンを避けて配線できる
+
+[トップへ戻る](../README.md)

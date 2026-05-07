@@ -42,7 +42,7 @@ https://www.image.micros.com.pl/_dane_techniczne_auto/cz%20am312.pdf
 > [!WARNING]
 > 間違えて接続するとセンサが壊れたり過熱したりすることがあるので、気を付けてください。
 
-## 以下を実行して結果を確認してみましょう
+## 手順
 
 PINの入力を知る
 
@@ -59,5 +59,11 @@ print(f'ir_sensor: {value}')
 あくまでサンプルの配線なので、自分で思うように実装してください。
 
 <img alt="practice06.png" src="practice06.png" width="500px">
+
+## ここまでできればOK
+
+- 人感センサをESP32に接続できる
+- GPIO入力としてON/OFFを読める
+- 検知時に値が変わることを確認できる
 
 [トップへ戻る](../README.md)

@@ -71,6 +71,6 @@ https://osoyoo.com/ja/2019/11/08/how-to-test-motor-encoder-with-arduino/
 
 ## 全方向制御
 
-<image src="51v1cEDP8ZL._AC_SY450_.jpg" width="500px">
+<img src="51v1cEDP8ZL._AC_SY450_.jpg" width="500px">
 
-<image src="Mecanum_wheel_control_principle.svg.png" width="500px">
+<img src="Mecanum_wheel_control_principle.svg.png" width="500px">
